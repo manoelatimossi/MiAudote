@@ -14,15 +14,11 @@ class LoginPage extends StatelessWidget {
       ),
       body: Container(
         decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            colors: [
-              Color(0xFFFFFFFF),
-              Color(0xFFFFFFFF),
-              Color(0xFFFFE0B2),
-            ],
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter
-          ),
+          gradient: LinearGradient(colors: [
+            Color(0xFFFFFFFF),
+            Color(0xFFFFFFFF),
+            Color(0xFFFFE0B2),
+          ], begin: Alignment.topCenter, end: Alignment.bottomCenter),
         ),
         padding: const EdgeInsets.only(top: 40, left: 40, right: 40),
         child: ListView(
@@ -41,7 +37,8 @@ class LoginPage extends StatelessWidget {
               decoration: InputDecoration(
                 labelText: "E-mail",
                 enabledBorder: OutlineInputBorder(
-                  borderSide: const BorderSide(width: 2.8, color: Color(0xFFFFCC80)),
+                  borderSide:
+                      const BorderSide(width: 2.8, color: Color(0xFFFFCC80)),
                   borderRadius: BorderRadius.circular(20.0),
                 ),
                 labelStyle: const TextStyle(
@@ -62,7 +59,8 @@ class LoginPage extends StatelessWidget {
               decoration: InputDecoration(
                 labelText: "Senha",
                 enabledBorder: OutlineInputBorder(
-                  borderSide: const BorderSide(width: 2.8, color: Color(0xFFFFCC80)),
+                  borderSide:
+                      const BorderSide(width: 2.8, color: Color(0xFFFFCC80)),
                   borderRadius: BorderRadius.circular(20.0),
                 ),
                 labelStyle: const TextStyle(
@@ -83,7 +81,7 @@ class LoginPage extends StatelessWidget {
                     child: const Text(
                       "Esqueceu sua senha?",
                       textAlign: TextAlign.right,
-                      style: TextStyle( color: Color(0xFF40C4FF), fontSize: 16),
+                      style: TextStyle(color: Color(0xFF40C4FF), fontSize: 16),
                     ),
                     onPressed: () {
                       Navigator.pushNamed(context, '/resetpassword');
@@ -112,7 +110,6 @@ class LoginPage extends StatelessWidget {
               height: 80,
             ),
             SizedBox.fromSize(
-
               child: UnconstrainedBox(
                 child: Container(
                   width: 120,
@@ -151,11 +148,9 @@ class LoginPage extends StatelessWidget {
                 ),
               ),
             ),
-
             const SizedBox(
               height: 10,
             ),
-
             const SizedBox(
               height: 10,
             ),

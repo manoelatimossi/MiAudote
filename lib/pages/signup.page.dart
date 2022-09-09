@@ -6,22 +6,16 @@ class SignupPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-        backgroundColor: const Color(0xFFFFE0B2)),
+      appBar: AppBar(backgroundColor: const Color(0xFFFFE0B2)),
       body: Container(
         padding: const EdgeInsets.only(top: 10, left: 40, right: 40),
         decoration: const BoxDecoration(
-          gradient: LinearGradient(
-              colors: [
-                Color(0xFFFFFFFF),
-                Color(0xFFFFFFFF),
-                Color(0xFFFFE0B2),
-              ],
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter
-          ),
+          gradient: LinearGradient(colors: [
+            Color(0xFFFFFFFF),
+            Color(0xFFFFFFFF),
+            Color(0xFFFFE0B2),
+          ], begin: Alignment.topCenter, end: Alignment.bottomCenter),
         ),
-
         child: ListView(
           children: <Widget>[
             SizedBox(
@@ -38,7 +32,8 @@ class SignupPage extends StatelessWidget {
               decoration: InputDecoration(
                 labelText: "Nome Completo",
                 enabledBorder: OutlineInputBorder(
-                  borderSide: const BorderSide(width: 2.8, color: Color(0xFFFFCC80)),
+                  borderSide:
+                      const BorderSide(width: 2.8, color: Color(0xFFFFCC80)),
                   borderRadius: BorderRadius.circular(20.0),
                 ),
                 labelStyle: const TextStyle(
@@ -58,7 +53,8 @@ class SignupPage extends StatelessWidget {
               decoration: InputDecoration(
                 labelText: "Digite seu endereço",
                 enabledBorder: OutlineInputBorder(
-                  borderSide: const BorderSide(width: 2.8, color: Color(0xFFFFCC80)),
+                  borderSide:
+                      const BorderSide(width: 2.8, color: Color(0xFFFFCC80)),
                   borderRadius: BorderRadius.circular(20.0),
                 ),
                 labelStyle: const TextStyle(
@@ -78,7 +74,8 @@ class SignupPage extends StatelessWidget {
               decoration: InputDecoration(
                 labelText: "Data de nascimento",
                 enabledBorder: OutlineInputBorder(
-                  borderSide: const BorderSide(width: 2.8, color: Color(0xFFFFCC80)),
+                  borderSide:
+                      const BorderSide(width: 2.8, color: Color(0xFFFFCC80)),
                   borderRadius: BorderRadius.circular(20.0),
                 ),
                 labelStyle: const TextStyle(
@@ -98,7 +95,8 @@ class SignupPage extends StatelessWidget {
               decoration: InputDecoration(
                 labelText: "E-mail",
                 enabledBorder: OutlineInputBorder(
-                  borderSide: const BorderSide(width: 2.8, color: Color(0xFFFFCC80)),
+                  borderSide:
+                      const BorderSide(width: 2.8, color: Color(0xFFFFCC80)),
                   borderRadius: BorderRadius.circular(20.0),
                 ),
                 labelStyle: const TextStyle(
@@ -119,7 +117,8 @@ class SignupPage extends StatelessWidget {
               decoration: InputDecoration(
                 labelText: "Senha",
                 enabledBorder: OutlineInputBorder(
-                  borderSide: const BorderSide(width: 2.8, color: Color(0xFFFFCC80)),
+                  borderSide:
+                      const BorderSide(width: 2.8, color: Color(0xFFFFCC80)),
                   borderRadius: BorderRadius.circular(20.0),
                 ),
                 labelStyle: const TextStyle(
@@ -130,7 +129,6 @@ class SignupPage extends StatelessWidget {
               ),
               style: const TextStyle(fontSize: 20),
             ),
-
             const SizedBox(
               height: 40,
             ),
@@ -173,11 +171,9 @@ class SignupPage extends StatelessWidget {
                 ),
               ),
             ),
-
             const SizedBox(
               height: 10,
             ),
-
             const SizedBox(
               height: 10,
             ),
