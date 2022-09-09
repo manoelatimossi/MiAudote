@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,18 +17,18 @@ class HomePage extends StatelessWidget {
         leading: Container(
           height: 40,
           width: 40,
-          decoration: new BoxDecoration(
-            image: new DecorationImage(
+          decoration: const BoxDecoration(
+            image: DecorationImage(
               image: AssetImage("assets/user-picture.png"),
               fit: BoxFit.fitHeight,
             ),
           ),
         ),
         actions: <Widget>[
-          Container(
+          SizedBox(
             width: 60,
             child: TextButton(
-              child: Icon(
+              child: const Icon(
                 Icons.search,
                 color: Color(0xFFBABABA),
               ),
@@ -36,7 +38,7 @@ class HomePage extends StatelessWidget {
         ],
       ),
       body: Container(
-        color: Color(0xFFF2F3F6),
+        color: const Color(0xFFF2F3F6),
         child: ListView(
           children: <Widget>[
             cardItem(),
@@ -65,22 +67,20 @@ Widget cardItem() {
           subtitle: Text("09/05/2019 18:37"),
           trailing: Icon(Icons.more_vert),
         ),
-        Container(
-          child: Image.asset("assets/post-picture-001.png"),
-        ),
+        Image.asset("assets/post-picture-001.png"),
         Container(
           padding: EdgeInsets.all(10),
-          child: Text(
+          child: const Text(
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas quis ex sem. Praesent elit dui, iaculis at interdum eu, rutrum et mi. "),
         ),
         ButtonBar(
           children: <Widget>[
             TextButton(
-              child: Icon(Icons.favorite),
+              child: const Icon(Icons.favorite),
               onPressed: () {},
             ),
             TextButton(
-              child: Icon(Icons.share),
+              child: const Icon(Icons.share),
               onPressed: () {},
             ),
           ],

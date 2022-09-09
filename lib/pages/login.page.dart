@@ -1,8 +1,8 @@
-
 import 'package:flutter/material.dart';
 import 'package:untitled/pages/reset-password.dart';
 import 'package:untitled/pages/homepage.dart';
 import 'package:untitled/pages/signup.page.dart';
+
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
 
@@ -86,12 +86,7 @@ class LoginPage extends StatelessWidget {
                       style: TextStyle( color: Color(0xFF40C4FF), fontSize: 16),
                     ),
                     onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => ResetPasswordPage(),
-                        ),
-                      );
+                      Navigator.pushNamed(context, '/resetpassword');
                     },
                   ),
                   const SizedBox(width: 20),
