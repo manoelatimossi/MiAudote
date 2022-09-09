@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:untitled/pages/reset-password.dart';
+import 'package:untitled/pages/reset_password.dart';
 import 'package:untitled/pages/homepage.dart';
-import 'package:untitled/pages/signup.page.dart';
+import 'package:untitled/pages/signup_page.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
