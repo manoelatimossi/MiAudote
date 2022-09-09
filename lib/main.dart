@@ -18,10 +18,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.deepOrange,
       ),
-      initialRoute: '/homepage',
+      initialRoute: '/',
       routes: {
-        '/homepage': (context) => const HomePage(),
-        '/login': (context) => const LoginPage(),
+        '/': (context) => const LoginPage(),
+        '/home': (context) => const HomePage(),
         '/resetpassword': (context) => const ResetPasswordPage(),
         '/signup': (context) => const SignupPage(),
       },

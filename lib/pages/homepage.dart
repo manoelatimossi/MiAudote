@@ -69,7 +69,7 @@ Widget cardItem() {
         ),
         Image.asset("assets/post-picture-001.png"),
         Container(
-          padding: EdgeInsets.all(10),
+          padding: const EdgeInsets.all(10),
           child: const Text(
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas quis ex sem. Praesent elit dui, iaculis at interdum eu, rutrum et mi. "),
         ),

@@ -177,7 +177,7 @@ class SignupPage extends StatelessWidget {
             const SizedBox(
               height: 10,
             ),
-            SizedBox(
+/*            SizedBox(
               height: 10,
               child: TextButton(
                 child: const Text(
@@ -186,15 +186,15 @@ class SignupPage extends StatelessWidget {
                   style: TextStyle(color: Color(0xFF40C4FF), fontSize: 18),
                 ),
                 onPressed: () {
-/*                  Navigator.push(
+                  Navigator.push(
                     context,
                     MaterialPageRoute(
                       builder: (context) => const SignupPage(),
                     ),
-                  );*/
+                  );
                 },
               ),
-            ),
+            ),*/
           ],
         ),
       ),
