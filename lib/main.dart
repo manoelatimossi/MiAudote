@@ -1,5 +1,5 @@
-import 'package:untitled/login.page.dart';
-import 'package:untitled/reset-password.dart';
+import 'package:untitled/pages/login.page.dart';
+import 'package:untitled/pages/reset-password.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.deepOrange,
       ),
-      home: LoginPage(),
+      home: const LoginPage(),
     );
   }
 }
