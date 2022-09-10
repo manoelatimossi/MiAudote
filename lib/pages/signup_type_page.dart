@@ -6,9 +6,6 @@ class SignupType extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: const Color(0xFFFFE0B2),
-      ),
       body: Container(
         decoration: const BoxDecoration(
           gradient: LinearGradient(colors: [
@@ -17,6 +14,7 @@ class SignupType extends StatelessWidget {
             Color(0xFFFFE0B2),
           ], begin: Alignment.topCenter, end: Alignment.bottomCenter),
         ),
+        padding: const EdgeInsets.only(top: 40, left: 40, right: 40),
         child: Center(
           child: Column(
             //mainAxisAlignment: MainAxisAlignment.spaceEvenly,

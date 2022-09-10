@@ -60,7 +60,7 @@ class PasswordCodePage extends StatelessWidget {
                               fontSize: 20,
                             ),
                           ),
-                          style: TextStyle(fontSize: 20),
+                          style: const TextStyle(fontSize: 20),
                         )
                       ],
                     ),
@@ -69,47 +69,46 @@ class PasswordCodePage extends StatelessWidget {
                     height: 80,
                   ),
                   SizedBox.fromSize(
-                      child: UnconstrainedBox(
-                        child: Container(
-                          width: 200,
-                          height: 70,
-                          decoration: const BoxDecoration(
-                            color: Color.fromRGBO(241, 138, 82, 100),
-                            borderRadius: BorderRadius.all(
-                              Radius.circular(30),
-                            ),
+                    child: UnconstrainedBox(
+                      child: Container(
+                        width: 200,
+                        height: 70,
+                        decoration: const BoxDecoration(
+                          color: Color.fromRGBO(241, 138, 82, 100),
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(30),
                           ),
-                          child: SizedBox(
-                            child: TextButton(
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: const <Widget>[
-                                  Text(
-                                    "Enviar código",
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.white,
-                                      fontSize: 20,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              onPressed: () {
-                                Navigator.pushNamed(context, '/passwordcode');
-                              },
-                            ),
-                          ),
-
                         ),
-                      )
+                        child: SizedBox(
+                          child: TextButton(
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: const <Widget>[
+                                Text(
+                                  "Enviar código",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white,
+                                    fontSize: 20,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            onPressed: () {
+                              Navigator.pushNamed(context, '/');
+                            },
+                          ),
+                        ),
+                      ),
+                    ),
                   ),
                   Stack(
-                    children: <Widget>[
-                      Container(
+                    children: const <Widget>[
+                      SizedBox(
                         width: 400,
                         height: 200,
-                        child:const Image(
-                            image:AssetImage('assets/rodape.png') as ImageProvider
+                        child: Image(
+                          image: AssetImage('assets/rodape.png'),
                         ),
                       ),
                     ],
@@ -117,9 +116,7 @@ class PasswordCodePage extends StatelessWidget {
                 ],
               ),
             ],
-          )
-
-      ),
+          )),
     );
   }
 }
