@@ -7,7 +7,7 @@ class ResetPasswordPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: const Color(0xFFFFE0B2),
         automaticallyImplyLeading: true,
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
@@ -16,8 +16,14 @@ class ResetPasswordPage extends StatelessWidget {
         ),
       ),
       body: Container(
-        padding: const EdgeInsets.only(top: 60, left: 40, right: 40),
-        color: Colors.white,
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(colors: [
+              Color(0xFFFFFFFF),
+              Color(0xFFFFFFFF),
+              Color(0xFFFFE0B2),
+            ], begin: Alignment.topCenter, end: Alignment.bottomCenter),
+          ),
+          padding: const EdgeInsets.only(top: 40, left: 40, right: 40),
         child: ListView(
           children: <Widget>[
             Column(
@@ -28,93 +34,91 @@ class ResetPasswordPage extends StatelessWidget {
                     SizedBox(
                       width: 200,
                       height: 200,
-                      child: Image.asset("assets/reset-password-icon.png"),
-                    ),
-                    const SizedBox(
-                      height: 20,
+                      child: Image.asset("assets/miaudote.png"),
                     ),
                     const Text(
-                      "Esqueceu sua senha?",
-                      style: TextStyle(
-                        fontSize: 32,
-                        fontWeight: FontWeight.w500,
-                      ),
-                    ),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                    const Text(
-                      "Por favor, informe o E-mail associado a sua conta que enviaremos um link para o mesmo com as instruções para restauração de sua senha.",
+                      "Vamos precisar de um código de validação que será enviado por e-mail, ok?",
                       style: TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.w400,
                       ),
                       textAlign: TextAlign.center,
-                    )
-                  ],
-                ),
-                SizedBox(
-                  width: double.infinity,
-                  child: Column(
-                    children: <Widget>[
-                      TextFormField(
-                        keyboardType: TextInputType.emailAddress,
-                        decoration: const InputDecoration(
-                          labelText: "E-mail",
-                          labelStyle: TextStyle(
-                            color: Colors.black38,
-                            fontWeight: FontWeight.w400,
-                            fontSize: 20,
+                    ),
+                  SizedBox(
+                    width: double.infinity,
+                    child: Column(
+                      children: <Widget>[
+                        TextFormField(
+                          keyboardType: TextInputType.emailAddress,
+                          decoration: const InputDecoration(
+                            labelText: "E-mail",
+                            labelStyle: TextStyle(
+                              color: Colors.black38,
+                              fontWeight: FontWeight.w400,
+                              fontSize: 20,
+                            ),
                           ),
+                          style: TextStyle(fontSize: 20),
+                        )
+                        ],
+                      ),
+                  ),
+                const SizedBox(
+                  height: 80,
+                ),
+                SizedBox.fromSize(
+                  child: UnconstrainedBox(
+                    child: Container(
+                      width: 300,
+                      height: 70,
+                      decoration: const BoxDecoration(
+                        color: Color.fromRGBO(241, 138, 82, 100),
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(30),
                         ),
-                        style: TextStyle(fontSize: 20),
                       ),
-                      const SizedBox(
-                        height: 20,
-                      ),
-                      Container(
-                        height: 60,
-                        alignment: Alignment.centerLeft,
-                        decoration: const BoxDecoration(
-                          gradient: LinearGradient(
-                            begin: Alignment.topLeft,
-                            end: Alignment.bottomRight,
-                            stops: [0.3, 1],
-                            colors: [
-                              Color(0xFFF58524),
-                              Color(0XFFF92B7F),
+                      child: SizedBox(
+                        child: TextButton(
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: const <Widget>[
+                              Text(
+                                "Enviar código",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white,
+                                  fontSize: 20,
+                                ),
+                              ),
                             ],
                           ),
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(5),
-                          ),
-                        ),
-                        child: SizedBox.expand(
-                          child: TextButton(
-                            child: const Text(
-                              "Enviar",
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white,
-                                fontSize: 20,
-                              ),
-                              textAlign: TextAlign.center,
-                            ),
-                            onPressed: () {},
-                          ),
+                            onPressed: () {
+                              Navigator.pushNamed(context, '/passwordcode');
+                      },
                         ),
                       ),
-                      const SizedBox(
-                        height: 20,
-                      ),
-                    ],
+
                   ),
                 )
-              ],
-            )
+            ),
+                Stack(
+                  children: <Widget>[
+                    Container(
+                      width: 400,
+                      height: 200,
+                      child:const Image(
+                        image:AssetImage('assets/rodape.png') as ImageProvider
+                      ),
+                    ),
+                  ],
+                )
           ],
         ),
-      ),
+              ],
+      )
+]
+    ),
+    ),
     );
   }
 }
