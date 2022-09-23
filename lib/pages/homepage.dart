@@ -32,7 +32,7 @@ class HomePage extends StatelessWidget {
                 Icons.search,
                 color: Color(0xFFBABABA),
               ),
-              onPressed: () => {},
+               onPressed: () => {},
             ),
           ),
         ],
