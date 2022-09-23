@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.deepOrange,
       ),
-      initialRoute: '/',
+      initialRoute: '/menu',
       routes: {
         '/': (context) => const LoginPage(),
         '/menu':(context) => const Menu(),
