@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class SignupPage extends StatelessWidget {
-  const SignupPage({super.key});
+class SignUpTutorPage extends StatelessWidget {
+  const SignUpTutorPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -31,6 +31,27 @@ class SignupPage extends StatelessWidget {
               keyboardType: TextInputType.emailAddress,
               decoration: InputDecoration(
                 labelText: "Nome Completo",
+                enabledBorder: OutlineInputBorder(
+                  borderSide:
+                      const BorderSide(width: 2.8, color: Color(0xFFFFCC80)),
+                  borderRadius: BorderRadius.circular(20.0),
+                ),
+                labelStyle: const TextStyle(
+                  color: Colors.black38,
+                  fontWeight: FontWeight.w400,
+                  fontSize: 20,
+                ),
+              ),
+              style: const TextStyle(fontSize: 20),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            TextFormField(
+              // autofocus: true,
+              keyboardType: TextInputType.emailAddress,
+              decoration: InputDecoration(
+                labelText: "CPF",
                 enabledBorder: OutlineInputBorder(
                   borderSide:
                       const BorderSide(width: 2.8, color: Color(0xFFFFCC80)),
@@ -90,7 +111,6 @@ class SignupPage extends StatelessWidget {
               height: 10,
             ),
             TextFormField(
-              // autofocus: true,
               keyboardType: TextInputType.emailAddress,
               decoration: InputDecoration(
                 labelText: "E-mail",
@@ -111,11 +131,31 @@ class SignupPage extends StatelessWidget {
               height: 10,
             ),
             TextFormField(
-              // autofocus: true,
               keyboardType: TextInputType.text,
               obscureText: true,
               decoration: InputDecoration(
                 labelText: "Senha",
+                enabledBorder: OutlineInputBorder(
+                  borderSide:
+                      const BorderSide(width: 2.8, color: Color(0xFFFFCC80)),
+                  borderRadius: BorderRadius.circular(20.0),
+                ),
+                labelStyle: const TextStyle(
+                  color: Colors.black38,
+                  fontWeight: FontWeight.w400,
+                  fontSize: 20,
+                ),
+              ),
+              style: const TextStyle(fontSize: 20),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            TextFormField(
+              keyboardType: TextInputType.text,
+              obscureText: true,
+              decoration: InputDecoration(
+                labelText: "Repita sua senha",
                 enabledBorder: OutlineInputBorder(
                   borderSide:
                       const BorderSide(width: 2.8, color: Color(0xFFFFCC80)),
@@ -149,7 +189,7 @@ class SignupPage extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: const <Widget>[
                           Text(
-                            "Cadastrar",
+                            "Continuar",
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               color: Colors.white,
@@ -159,42 +199,13 @@ class SignupPage extends StatelessWidget {
                         ],
                       ),
                       onPressed: () {
-/*                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => HomePage(),
-                          ),
-                        );*/
+                        Navigator.pushNamed(context, '/firstpreferences');
                       },
                     ),
                   ),
                 ),
               ),
             ),
-            const SizedBox(
-              height: 10,
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-/*            SizedBox(
-              height: 10,
-              child: TextButton(
-                child: const Text(
-                  "Cadastre-se",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(color: Color(0xFF40C4FF), fontSize: 18),
-                ),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const SignupPage(),
-                    ),
-                  );
-                },
-              ),
-            ),*/
           ],
         ),
       ),

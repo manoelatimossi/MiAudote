@@ -41,7 +41,9 @@ class SignupType extends StatelessWidget {
       backgroundColor: const Color(0xFFF1AA82),
       actions: [
         TextButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushNamed(context, '/signupshellter');
+          },
           child: const Text(
             'Sim',
             style: TextStyle(color: Colors.white),
@@ -49,7 +51,7 @@ class SignupType extends StatelessWidget {
         ),
         TextButton(
           onPressed: () {
-            Navigator.pushNamed(context, '/signup');
+            Navigator.pushNamed(context, '/signuptutor');
           },
           child: const Text(
             'Não',
