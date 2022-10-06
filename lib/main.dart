@@ -1,3 +1,4 @@
+import 'package:untitled/pages/add_pet.dart';
 import 'package:untitled/pages/homepage.dart';
 import 'package:untitled/pages/homepage_shellter.dart';
 import 'package:untitled/pages/password.code.dart';
@@ -6,6 +7,7 @@ import 'package:untitled/pages/first_preferences.dart';
 import 'package:untitled/pages/reset_password.dart';
 import 'package:flutter/material.dart';
 import 'package:untitled/pages/second_preferences.dart';
+import 'package:untitled/pages/shellter_pet_list.dart';
 import 'package:untitled/pages/signup_shellter_page.dart';
 import 'package:untitled/pages/signup_tutor_page.dart';
 import 'package:untitled/pages/signup_type_page.dart';
@@ -25,7 +27,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.deepOrange,
       ),
-      initialRoute: '/',
+      initialRoute: '/addpet',
       routes: {
         '/': (context) => const LoginPage(),
         '/menu': (context) => const Menu(),
@@ -38,6 +40,8 @@ class MyApp extends StatelessWidget {
         '/passwordcode': (context) => const PasswordCodePage(),
         '/firstpreferences': (context) => const FirstPreferencesPage(),
         '/secondpreferences': (context) => const SecondPreferencesPage(),
+        '/shellterpetlist': (context) => const ShellterPetListPage(),
+        '/addpet': (context) => const AddPetPage(),
       },
     );
   }

@@ -8,6 +8,7 @@ class HomePageShellter extends StatefulWidget {
 }
 
 class _HomePageShellterState extends State<HomePageShellter> {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -122,7 +123,9 @@ class _HomePageShellterState extends State<HomePageShellter> {
                       fontSize: 17,
                     ),
                   ),),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, '/shellterpetlist');
+                },
               ),
               const SizedBox(
                 width: 20,
