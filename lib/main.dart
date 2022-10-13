@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.deepOrange,
       ),
-      initialRoute: '/addpet',
+      initialRoute: '/',
       routes: {
         '/': (context) => const LoginPage(),
         '/menu': (context) => const Menu(),
