@@ -29,10 +29,12 @@ class HomePage extends StatelessWidget {
             width: 60,
             child: TextButton(
               child: const Icon(
-                Icons.search,
+                Icons.account_circle,
                 color: Color(0xFFBABABA),
               ),
-              onPressed: () => {},
+              onPressed: () {
+              Navigator.pushNamed(context, '/menu');
+            },
             ),
           ),
         ],

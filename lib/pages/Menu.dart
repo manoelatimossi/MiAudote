@@ -45,12 +45,55 @@ class Menu extends StatelessWidget {
               Color(0xFFFFE0B2),
             ], begin: Alignment.topCenter, end: Alignment.bottomCenter),
           ),
-          child: ListView(padding: const EdgeInsets.all(8), children: [
-            SizedBox(height: 50),
-            ElevatedButton.icon(
+          child: ListView( children: [
+          Padding(padding: const EdgeInsets.all(0),
+            child:CircleAvatar(
+                radius: 50,
+                backgroundImage:AssetImage('assets/dog1.jpg'),
+              )),
+             Padding(padding: const EdgeInsets.all(35),
+            child: SizedBox(
+              height:40, width:5, child:  TextButton(
+    child: Text('Usernamer'),
+    style: TextButton.styleFrom(
+      primary: Colors.white,
+      backgroundColor: Color.fromARGB(2255, 255, 204, 128),
+      textStyle: TextStyle(
+          fontSize: 20
+    )),
+    onPressed: null))),
+            Padding(padding: const EdgeInsets.all(15),
+            child: ElevatedButton.icon(
                 onPressed: null,
                 icon: Icon(Icons.favorite),
-                label: Text('Procurar Matches'))
+                label: Text('Procurar Matches'),
+                style: ButtonStyle(backgroundColor: MaterialStatePropertyAll<Color>(Color.fromARGB(255, 255, 204, 128))))),
+            Padding(padding: const EdgeInsets.all(15),
+            child: ElevatedButton.icon(
+                onPressed: null,
+                icon: Icon(Icons.wechat),
+                label: Text('Suas Conversas'),
+                style: ButtonStyle(backgroundColor: MaterialStatePropertyAll<Color>(Color.fromARGB(255, 255, 204, 128))))),
+            Padding(padding: const EdgeInsets.all(15),
+            child: ElevatedButton.icon(
+                onPressed: () {
+              Navigator.pushNamed(context, '/home');
+            },
+                icon: Icon(Icons.home),
+                label: Text('Feed dos abrigos'),
+                style: ButtonStyle(backgroundColor: MaterialStatePropertyAll<Color>(Color.fromARGB(255, 255, 204, 128))))),
+            Padding(padding: const EdgeInsets.all(15),
+            child: ElevatedButton.icon(
+                onPressed: null,
+                icon: Icon(Icons.security),
+                label: Text('Fazer Denúncia'),
+                style: ButtonStyle(backgroundColor: MaterialStatePropertyAll<Color>(Color.fromARGB(255, 255, 204, 128))))),
+            Padding(padding: const EdgeInsets.all(15),
+            child: ElevatedButton.icon(
+                onPressed: null,
+                icon: Icon(Icons.settings),
+                label: Text('Configurações'),
+                style: ButtonStyle(backgroundColor: MaterialStatePropertyAll<Color>(Color.fromARGB(255, 255, 204, 128)))))
           ]),
         ));
   }
