@@ -267,7 +267,7 @@ class _AddPetPageState extends State<AddPetPage> {
       ],
     );
   }
-  // Pending Jesulen - Start
+
   Widget _featureList() {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -301,7 +301,7 @@ class _AddPetPageState extends State<AddPetPage> {
           groupValue: features[1],
           onChanged: (value) {
             setState(() {
-              isChecked ? features[1] = value.toString() : features[1] = '';
+              features[1] = value.toString();
             });
           },
         ),
@@ -317,7 +317,7 @@ class _AddPetPageState extends State<AddPetPage> {
           groupValue: features[2],
           onChanged: (value) {
             setState(() {
-              isChecked ? features[2] = value.toString() : features[2] = '';
+              features[2] = value.toString();
             });
           },
         ),
@@ -333,7 +333,7 @@ class _AddPetPageState extends State<AddPetPage> {
           groupValue: features[3],
           onChanged: (value) {
             setState(() {
-              isChecked ? features[3] = value.toString() : features[3] = '';
+              features[3] = value.toString();
             });
           },
         ),
@@ -349,12 +349,11 @@ class _AddPetPageState extends State<AddPetPage> {
           groupValue: features[4],
           onChanged: (value) {
             setState(() {
-              isChecked ? features[4] = value.toString() : features[4] = '';
+              features[4] = value.toString();
             });
           },
         ),
       ],
     );
   }
-  // Pending Jesulen - End
 }
